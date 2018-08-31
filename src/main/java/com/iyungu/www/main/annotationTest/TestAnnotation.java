@@ -19,18 +19,14 @@ public class TestAnnotation {
 
     @MyAnnotation("Hello")
     @MyAnnotation("World")
-    public void show(@MyAnnotation("ABC")String str){
-
+    public static void show(@MyAnnotation("ABC")String str){
+        System.out.println("test reapet annotation");
     }
     /**
      * 注解与反射配合使用
      */
     @Test
     public void test1() throws NoSuchMethodException {
-
-
-        
-
 
         Class<TestAnnotation> clazz =TestAnnotation.class;
         Method m1=clazz.getMethod("show");
