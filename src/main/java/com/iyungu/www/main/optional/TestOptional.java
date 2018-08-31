@@ -32,24 +32,24 @@ public class TestOptional {
         //Optional.of(T t):创建一个Optional 实例
          Optional<Employee> op =Optional.of(new Employee());
         Employee emp = op.get();
-        System.out.println(emp);
+        System.out.println(String.valueOf(emp.getAge()));
     }
     @Test
     public void test2(){
         //Optional.empty():创建一个空的Optional实例
         Optional<Employee> op =Optional.empty();
         Employee emp = op.get();
-        System.out.println(emp);
+        System.out.println(String.valueOf(emp.getAge()));
     }
     @Test
     public void test3(){
         //Optional.ofNullable(T t):若t不为null，创建Optional实例，否则创建空实例
-        Optional<Employee> op =Optional.ofNullable(null);
+        Optional<Employee> op =Optional.ofNullable(new Employee("john",41,453,Employee.Status.FREE));
 
         //isPresent():判断是否包含值
         if(op.isPresent()){
             Employee emp = op.get();
-            System.out.println(emp);
+            System.out.println("测试是否包含值："+emp);
         }
         Employee em = op.orElse(new Employee("zhang",10,100, Employee.Status.BUSY));
         System.out.println(em);

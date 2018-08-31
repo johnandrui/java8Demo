@@ -7,6 +7,8 @@ import com.iyungu.www.interfaces.lambda.MyPredicate;
 import org.testng.annotations.Test;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * @ProjectName: java8Demo
@@ -33,7 +35,7 @@ public class LambdaMain {
         TreeSet<Integer> ts = new TreeSet<>(com);
     }
     //需求：获取当前公司中员工年龄大于35的员工信息
-      List<Employee> employees = Arrays.asList(
+   static   List<Employee> employees = Arrays.asList(
               new Employee("张三",18,4000.12),
               new Employee("李思",38,5000.22),
               new Employee("肇东",58,6000.11),
@@ -119,6 +121,7 @@ public class LambdaMain {
     }
 
     public static void main(String[] args){
-
+            List<Integer> numList=Arrays.asList(1,2,3,4);
+        numList.stream().filter((e) -> e>=2).forEach(System.out::println);
     }
 }
