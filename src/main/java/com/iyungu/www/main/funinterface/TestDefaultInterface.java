@@ -2,6 +2,9 @@ package com.iyungu.www.main.funinterface;
 
 import com.iyungu.www.action.SubClass;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * @ProjectName: java8Demo
  * @Author： zhangrui@iyungu.com
@@ -13,5 +16,12 @@ public class TestDefaultInterface {
     public static void main(String[] args){
         SubClass sub = new SubClass();
         sub.getName();
+        test();
     }
+
+    public static void test(){
+        List list= Arrays.asList("a","b","c","d");
+        list.forEach(System.out::println);
+    }
+
 }
