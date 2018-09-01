@@ -349,6 +349,13 @@
             <artifactId>jetty-io</artifactId>
             <version>8.1.15.v20140411</version>
         </dependency>
+        <!--lombok注解生成bean的get，set以及构造方法-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.10</version>
+            <scope>provided</scope>
+        </dependency>
 
     </dependencies>
 
