@@ -1,6 +1,7 @@
 package com.iyungu.www.main.lambda;
 
 import com.iyungu.www.main.testFunction.Project;
+import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +34,31 @@ public class TestLambda8 {
         data.add(Project.builder().name("Elves").language("java").author("biezhi")
                 .stars(200).description("Spider").build());
         return data;
+    }
+     @Test
+    public static void testReplace(){
+         List<Project> projects=buildData();
+//         List<Project> newList= getNews(projects,project->project.getName().contains("Blade"),"其他");
+//         System.out.println("print newList==>"+newList);
+         String ss="普通外科手术险";
+         String s2="普通外科护理单元";
+         System.out.println("isTrue:==>"+ss.contains(s2.substring(0,4)));
+         Predicate<Project> namesStartingWiths=  project-> project.getName().contains("s");
+         getNews(projects,project->project.getName().contains("Blade"),"其他").stream().forEach(System.out::println);
+
+    }
+    public static List<Project> getNews(List<Project> projects,Predicate<Project> predicate,String param){
+        List<Project> names=new ArrayList<>();
+        for (Project project: projects
+                ) {
+            if(predicate.test(project)){
+                names.add(Project.builder().name(param).language(project.getLanguage()).author("biezhi")
+                        .stars(3500).description("Lightning fast and elegant mvc framework for Java8").build());
+            }else {
+                names.add(project);
+            }
+        }
+        return names;
     }
 
     public static void main(String[] args) {
