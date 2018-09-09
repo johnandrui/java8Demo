@@ -6,6 +6,7 @@ import com.iyungu.www.entity.Man;
 import com.iyungu.www.entity.NewMan;
 import org.testng.annotations.Test;
 
+
 import java.util.Optional;
 
 /**
@@ -30,9 +31,10 @@ public class TestOptional {
     @Test
     public void test1(){
         //Optional.of(T t):创建一个Optional 实例
-         Optional<Employee> op =Optional.of(new Employee());
+        /* Optional<Employee> op =Optional.of(new Employee());
         Employee emp = op.get();
-        System.out.println(String.valueOf(emp.getAge()));
+        System.out.println(String.valueOf(emp.getAge()));*/
+        System.out.println(String.valueOf(Optional.of(new Employee()).get().getAge()));
     }
     @Test
     public void test2(){
@@ -67,7 +69,7 @@ public class TestOptional {
         Optional<String> str1 =op.flatMap(e -> Optional.of(e.getName()));
     }
       //例题
-    @Test
+      @Test
     public void test5(){
          Man man= new Man();
          String n = getGodnessName(man);
@@ -98,6 +100,17 @@ public class TestOptional {
                 .getName();
     }
 
+/*    DepartmentInfo  bean= departmentDistributionInformationMapper.getById("1");
+         logger.info(""+bean);
+         Optional.ofNullable(bean);
+         if( Optional.ofNullable(bean).isPresent()){
+        System.out.println("存在值！");
+        System.out.println(String.valueOf(Optional.of(bean).get().getId()));
+    }
+         if(! Optional.ofNullable(bean).isPresent()){
+        System.out.println("不存在值！");
+        Optional.ofNullable(bean).orElse(new DepartmentInfo());
+    }*/
 
 
 }
