@@ -10,7 +10,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class QuizEnd {
+public class QuizEnd8 {
     /**
      * (1) 找出2011年发生的所有交易，并按交易额排序（从低到高）。
      * (2) 交易员都在哪些不同的城市工作过？
