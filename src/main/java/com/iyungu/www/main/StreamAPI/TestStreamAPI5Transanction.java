@@ -2,10 +2,10 @@ package com.iyungu.www.main.StreamAPI;
 
 import com.iyungu.www.entity.Trader;
 import com.iyungu.www.entity.Transanction;
-import org.junit.Before;
+/*import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;*/
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -21,8 +21,8 @@ import java.util.stream.Stream;
  * @Date 2018/5/11  10:06
  * @Modified By:
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"classpath:spring/spring-mvc.xml","classpath:spring/spring-context.xml","classpath:spring/spring-mybatis.xml"})
+/*@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration({"classpath:spring/spring-mvc.xml","classpath:spring/spring-context.xml","classpath:spring/spring-mybatis.xml"})*/
 public class TestStreamAPI5Transanction {
 
    // List<Transanction> transanctions = null;
@@ -41,7 +41,7 @@ public class TestStreamAPI5Transanction {
                 new Transanction(alan,2012,950)
         );
 
-    @Before
+   /* @Before*/
     public void init(){
         Trader raoul = new Trader("Raoul","Cambridge");
         Trader mario = new Trader("Mario","Milan");
