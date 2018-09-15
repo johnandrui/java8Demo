@@ -1,5 +1,6 @@
 package com.iyungu.www.main.timetest;
 
+
 import org.testng.annotations.Test;
 
 import java.time.*;
@@ -34,9 +35,13 @@ public class TestLocalDateTime {
         System.out.println("year:"+ldt.getYear());
         System.out.println("month:"+ldt.getMonth());
         System.out.println("monthValue:"+ldt.getMonthValue());
+        System.out.println("week:"+ldt.getDayOfWeek());
         System.out.println("hour:"+ldt.getHour());
         System.out.println("minute:"+ldt.getMinute());
         System.out.println("second:"+ldt.getSecond());
+        System.out.println("dayOfWeek:"+ldt.getDayOfWeek());
+        System.out.println("dayOfMonth:"+ldt.getDayOfMonth());
+        System.out.println("dayOfYear:"+ldt.getDayOfYear());
 
     }
 
