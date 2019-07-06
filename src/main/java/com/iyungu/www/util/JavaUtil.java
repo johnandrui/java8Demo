@@ -337,7 +337,7 @@ public class JavaUtil {
 	}
 
 	/**
-	 * @Author: zhangchu@iyungu.com
+	 * @Author: zhangchu@john.com
 	 * @Description:将List<Map>对象转化为List<JavaBean>此方法已通过测试
 	 * @Date: 15:38 2018/2/13
 	 * @Modified By:
@@ -356,7 +356,7 @@ public class JavaUtil {
 		return beanList;
 	}*/
 	/**
-	 * @Author:  zhangrui@iyungu.com
+	 * @Author:  zhangrui@john.com
 	 * @Description: getRandomString    生成随机字符串
 	 * @Params: [length]
 	 * @param:
@@ -378,7 +378,7 @@ public class JavaUtil {
 		return sb.toString();
 	}
 	/**
-	 * @Author: zhangrui@iyungu.com
+	 * @Author: zhangrui@john.com
 	 * @Description:判断对象是否为空
 	 * @Params:
 	 *   @param: obj
