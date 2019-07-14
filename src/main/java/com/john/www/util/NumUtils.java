@@ -30,6 +30,23 @@ public class NumUtils {
         return "";
     }
 
+    /**
+     * 根据属性，获取get方法
+     * @param ob 对象
+     * @param name 属性名
+     * @return
+     * @throws Exception
+     */
+    public static Object getGetMethod(Object ob , String name)throws Exception{
+        Method[] m = ob.getClass().getMethods();
+        for(int i = 0;i < m.length;i++){
+            if(("get"+name).toLowerCase().equals(m[i].getName().toLowerCase())){
+                return m[i].invoke(ob);
+            }
+        }
+        return null;
+    }
+
 
 
     public static void main(String[] args) throws Exception {
@@ -50,8 +67,11 @@ public class NumUtils {
 //                        new MedicalOrderInfo("aa2","test0","01床"),
 //                        new MedicalOrderInfo("aa3","test00008","02")
 //                );
+       Long startMillis = System.currentTimeMillis();
         dolist(medicalOrderInfoList,MedicalOrderInfo.class,"bedNum");
+        Long endMillis = System.currentTimeMillis();
         System.out.println("start ====== > " + medicalOrderInfoList.toString());
+        System.out.println(" cost time ============= > " + (endMillis - startMillis));
     }
 
 
@@ -71,22 +91,7 @@ public class NumUtils {
 
 
 
-    /**
-     * 根据属性，获取get方法
-     * @param ob 对象
-     * @param name 属性名
-     * @return
-     * @throws Exception
-     */
-    public static Object getGetMethod(Object ob , String name)throws Exception{
-        Method[] m = ob.getClass().getMethods();
-        for(int i = 0;i < m.length;i++){
-            if(("get"+name).toLowerCase().equals(m[i].getName().toLowerCase())){
-                return m[i].invoke(ob);
-            }
-        }
-        return null;
-    }
+
 
 
 
