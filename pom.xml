@@ -11,7 +11,7 @@
 
     <properties>
         <!-- spring版本号 -->
-        <spring.version>3.2.17.RELEASE</spring.version>
+        <spring.version>5.2.7.RELEASE</spring.version>
         <!--<spring.version>4.3.12.RELEASE</spring.version>-->
         <!-- log4j日志文件管理包版本 -->
         <slf4j.version>1.6.6</slf4j.version>
@@ -430,7 +430,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>5.1.5.RELEASE</version>
+            <version>5.2.7.RELEASE</version>
         </dependency>
         <!--阿里云文件上传-->
         <dependency>
@@ -447,7 +447,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>5.1.5.RELEASE</version>
+            <version>5.2.7.RELEASE</version>
         </dependency>
 
     </dependencies>
