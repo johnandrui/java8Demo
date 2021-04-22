@@ -21,7 +21,7 @@
         <!-- mybatis版本号 -->
         <mybatis.version>3.2.1</mybatis.version>
         <!--csf版本号-->
-        <cxf.version>2.7.18</cxf.version>
+        <cxf.version>3.3.8</cxf.version>
         <mysql.connector.version>5.1.38</mysql.connector.version>
         <!--mybatis-generator-properties-->
         <mybatis.generator.configurationFile>${basedir}/src/main/resources/generator/generatorConfig.xml</mybatis.generator.configurationFile>
